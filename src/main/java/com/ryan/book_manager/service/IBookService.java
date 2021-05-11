@@ -12,7 +12,7 @@ public interface IBookService {
 
     Book saveBook(Book book);
 
-    Book findBookById(Long id) throws BookNotFoundException;
+    Book findBookById(Long id);
 
     void deleteBook(Long id);
 }

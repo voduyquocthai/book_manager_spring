@@ -4,9 +4,13 @@ import lombok.Data;
 
 import javax.persistence.*;
 
+import java.io.Serializable;
+
+import static javax.persistence.FetchType.LAZY;
+
 @Entity
 @Data
-public class Book {
+public class Book implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

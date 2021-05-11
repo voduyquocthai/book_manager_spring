@@ -5,5 +5,5 @@ import com.ryan.book_manager.model.Book;
 
 public interface IAuthorService {
 
-    Iterable<Author> findAllBooks();
+    Iterable<Author> findAllAuthors();
 }

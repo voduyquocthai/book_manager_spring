@@ -7,6 +7,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @AllArgsConstructor
 public class BookServiceImpl implements IBookService {
@@ -25,8 +27,9 @@ public class BookServiceImpl implements IBookService {
     }
 
     @Override
-    public Book findBookById(Long id) throws BookNotFoundException {
-        return bookRepo.findBookById(id).orElseThrow(() -> new BookNotFoundException("Book by this id:" + id + "was not found"));
+    public Book findBookById(Long id) {
+        return bookRepo.findBookById(id)
+                .orElseThrow(() -> new BookNotFoundException("Book with this id:" + id + "was not found"));
     }
 
     @Override

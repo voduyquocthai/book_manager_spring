@@ -14,7 +14,7 @@ public class AuthorServiceImpl implements IAuthorService{
     private final AuthorRepo authorRepo;
 
     @Override
-    public Iterable<Author> findAllBooks() {
+    public Iterable<Author> findAllAuthors() {
         return authorRepo.findAll();
     }
 }
